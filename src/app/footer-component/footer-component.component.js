@@ -6,18 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppComponent = void 0;
+exports.FooterComponentComponent = void 0;
 const core_1 = require("@angular/core");
-let AppComponent = class AppComponent {
+let FooterComponentComponent = class FooterComponentComponent {
     constructor() {
-        this.title = 'Not a Loan-Application';
+        this.admin = { fullName: "Manan Charania", copyrightInfo: "DeadMan Group", email: "deadmangroup@gmail.com" };
+    }
+    ngOnInit() {
     }
 };
-AppComponent = __decorate([
+FooterComponentComponent = __decorate([
     core_1.Component({
-        selector: 'app-root',
-        templateUrl: './app.component.html',
-        styleUrls: ['./app.component.css']
+        selector: 'app-footer-component',
+        templateUrl: './footer-component.component.html',
+        styleUrls: ['./footer-component.component.css']
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
+], FooterComponentComponent);
+exports.FooterComponentComponent = FooterComponentComponent;

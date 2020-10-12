@@ -6,18 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppComponent = void 0;
+exports.ShowscoreComponent = void 0;
 const core_1 = require("@angular/core");
-let AppComponent = class AppComponent {
+let ShowscoreComponent = class ShowscoreComponent {
     constructor() {
-        this.title = 'Not a Loan-Application';
+        this.scores = { panNumber: 'abcde12345q', firstName: 'Chandu', score: 999 };
+    }
+    ngOnInit() {
     }
 };
-AppComponent = __decorate([
+ShowscoreComponent = __decorate([
     core_1.Component({
-        selector: 'app-root',
-        templateUrl: './app.component.html',
-        styleUrls: ['./app.component.css']
+        selector: 'app-showscore',
+        templateUrl: './showscore.component.html',
+        styleUrls: ['./showscore.component.css']
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
+], ShowscoreComponent);
+exports.ShowscoreComponent = ShowscoreComponent;

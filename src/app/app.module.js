@@ -10,12 +10,16 @@ exports.AppModule = void 0;
 const platform_browser_1 = require("@angular/platform-browser");
 const core_1 = require("@angular/core");
 const app_component_1 = require("./app.component");
+const showscore_component_1 = require("./showscore/showscore.component");
+const footer_component_component_1 = require("./footer-component/footer-component.component");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
         declarations: [
-            app_component_1.AppComponent
+            app_component_1.AppComponent,
+            showscore_component_1.ShowscoreComponent,
+            footer_component_component_1.FooterComponentComponent
         ],
         imports: [
             platform_browser_1.BrowserModule
