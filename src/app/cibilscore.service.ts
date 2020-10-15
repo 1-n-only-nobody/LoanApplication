@@ -13,7 +13,7 @@ export class CibilscoreService {
   // and then in the constructor this.client = HttpClient
   constructor(private client: HttpClient) { }
 
-  url = 'http://localhost:3000/scores';
+  url = 'http://localhost:3001/scores';
 
   findAll(): Observable<CibilScore[]> {
 

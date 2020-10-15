@@ -6,10 +6,21 @@
     <th id="panNumber">PAN Number</th>
     <th id="firstName">First Name</th>
     <th id="score">Scores</th>
+    <th id="extra1"></th>
+    <th id="extra2"></th>
+    <th id="showHide"></th>
   </tr>
   <tr *ngFor='let score of scoreList'>
+    <!-- Interpolation -->
     <td>{{score.panNumber}}</td>
     <td>{{score.firstName}}</td>
     <td>{{score.score}}</td>
+    <!-- event - () and property - [] binding -->
+    <td><button (click)="handleClick('show')" [disabled]="!isHidden">Show Image</button></td>
+    <td><button (click)="handleClick('hide')" [disabled]="isHidden">Hide Image</button></td>
+    <td><button (click)="handleClick(show)" >{{show}}</button></td>
+    <td></td>
   </tr>
 </table>
+
+<img src="../../assets/images/movie2.jpg" [ngStyle]={display:showImage} style="height: 20%; width: 20%;" alt="sampleimg">

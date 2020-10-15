@@ -13,6 +13,9 @@ export class ShowscoreComponent implements OnInit {
 
   scoreList: CibilScore[];
 
+  showImage = 'none';
+  isHidden = true;
+  show = 'show';
   constructor(private service: CibilscoreService) { }
 
   ngOnInit() {
@@ -20,4 +23,16 @@ export class ShowscoreComponent implements OnInit {
     this.service.findAll().subscribe(data => this.scoreList = data);
   }
 
+  handleClick( val: string): void {
+
+    if (val === 'show') {
+      this.showImage = 'inline';
+      this.isHidden = false;
+      this.show = 'hide';
+    } else if (val === 'hide') {
+      this.showImage = 'none';
+      this.isHidden = true;
+      this.show = 'show';
+    }
+  }
 }
