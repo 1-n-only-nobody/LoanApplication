@@ -7,9 +7,9 @@
     <th>First Name</th>
     <th>Scores</th>
   </tr>
-  <tr>
-    <td>{{scores.panNumber}}</td>
-    <td>{{scores.firstName}}</td>
-    <td>{{scores.score}}</td>
+  <tr *ngFor='let score of scoreList'>
+    <td>{{score.panNumber}}</td>
+    <td>{{score.firstName}}</td>
+    <td>{{score.score}}</td>
   </tr>
 </table>

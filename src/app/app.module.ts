@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,9 +13,9 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
     FooterComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
