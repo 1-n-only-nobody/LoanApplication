@@ -1,7 +1,13 @@
 
 <h1>Cibil Scores</h1>
 
-<app-search [searchLabel]="searchText"></app-search>
+<!-- child-selector [childProperty]='parentProperty' [childProperty]='parentProperty' -->
+<app-search [searchLabel]="searchText" [searchString]='queryString' (responseEvent)="handleResponse($event)"></app-search>
+<input type="text" [(ngModel)]='queryString'>
+
+<h3>{{message}}</h3>
+
+<h4>Salary : {{salary|currency:'INR':'symbol':'4.2-2'}}</h4>
 
 <table class="table table-striped">
   <tr>
@@ -15,7 +21,7 @@
   <tr *ngFor='let score of scoreList'>
     <!-- Interpolation -->
     <td>{{score.panNumber}}</td>
-    <td>{{score.firstName}}</td>
+    <td>{{score.firstName|uppercase}}</td>
     <td>{{score.score}}</td>
     <!-- event - () and property - [] binding -->
     <td><button (click)="handleClick('show')" [disabled]="!isHidden">Show Image</button></td>

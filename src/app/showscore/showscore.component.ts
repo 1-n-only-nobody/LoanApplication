@@ -16,7 +16,13 @@ export class ShowscoreComponent implements OnInit {
   showImage = 'none';
   isHidden = true;
   show = 'show';
-  searchText = 'Search by CibilScore';
+
+  salary = 99999999;
+
+  searchText = 'Search by Key in List';
+  queryString = '';
+  message = '';
+
 
   constructor(private service: CibilscoreService) { }
 
@@ -36,5 +42,9 @@ export class ShowscoreComponent implements OnInit {
       this.isHidden = true;
       this.show = 'show';
     }
+  }
+
+  handleResponse(val): void {
+    this.message = val;
   }
 }

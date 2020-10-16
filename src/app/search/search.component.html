@@ -6,5 +6,6 @@
 <h4 (mouseover)="change()" [ngClass]="{'blueText':showColor,'thinBorder':showBorder}"> Done during Training Session</h4>
 
 <!-- property binding with a named property having class name -->
-<label for="SearchLabel" [ngClass]='textColor'> {{searchLabel}} </label>
-<input type="text">
+<label for="SearchLabel" [ngClass]='textColor'> {{searchLabel}} </label><br>
+
+<button (click)="handleClick()"> <i class="fa fa-search" aria-hidden="true"></i> </button>
