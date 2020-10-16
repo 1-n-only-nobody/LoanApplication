@@ -1,0 +1,10 @@
+
+<!-- CSS property binding with array of properties -->
+<h1 [ngClass]=[textColor,border]> Component nesting </h1>
+
+<!-- CSS class binding with object -->
+<h4 (mouseover)="change()" [ngClass]="{'blueText':showColor,'thinBorder':showBorder}"> Done during Training Session</h4>
+
+<!-- property binding with a named property having class name -->
+<label for="SearchLabel" [ngClass]='textColor'> {{searchLabel}} </label>
+<input type="text">

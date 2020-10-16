@@ -7,13 +7,15 @@ import { ShowscoreComponent } from './showscore/showscore.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { TwowayComponent } from './twoway/twoway.component';
 import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowscoreComponent,
     FooterComponentComponent,
-    TwowayComponent
+    TwowayComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule

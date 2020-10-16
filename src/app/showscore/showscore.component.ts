@@ -16,6 +16,8 @@ export class ShowscoreComponent implements OnInit {
   showImage = 'none';
   isHidden = true;
   show = 'show';
+  searchText = 'Search by CibilScore';
+
   constructor(private service: CibilscoreService) { }
 
   ngOnInit() {
