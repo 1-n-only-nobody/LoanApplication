@@ -17,6 +17,7 @@ export class ShowscoreComponent implements OnInit {
   isHidden = true;
   show = 'show';
 
+  currentDate = new Date();
   salary = 99999999;
 
   searchText = 'Search by Key in List';

@@ -8,6 +8,7 @@
 <h3>{{message}}</h3>
 
 <h4>Salary : {{salary|currency:'INR':'symbol':'4.2-2'}}</h4>
+<h6>Date : {{currentDate|date:'full'}} </h6>
 
 <table class="table table-striped">
   <tr>
@@ -22,7 +23,7 @@
     <!-- Interpolation -->
     <td>{{score.panNumber}}</td>
     <td>{{score.firstName|uppercase}}</td>
-    <td>{{score.score}}</td>
+    <td>{{score.score|number:'3.2-2'}}</td>
     <!-- event - () and property - [] binding -->
     <td><button (click)="handleClick('show')" [disabled]="!isHidden">Show Image</button></td>
     <td><button (click)="handleClick('hide')" [disabled]="isHidden">Hide Image</button></td>
