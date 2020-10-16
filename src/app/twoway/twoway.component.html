@@ -1,0 +1,10 @@
+
+<label for="city">City</label><br>
+<input type="text" [(ngModel)]='city'><br>
+<button (click)="handleClickToo()"> ADD </button>
+
+<p> City selected  is {{city}}</p>
+
+<ol>
+  <li *ngFor='let eachCity of cities'> {{eachCity}} </li>
+</ol>
