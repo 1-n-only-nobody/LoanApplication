@@ -10,6 +10,7 @@ import { CibilscoreService } from '../cibilscore.service';
 export class AddScoresComponent implements OnInit {
 
   scoreToAdd: CibilScore = {
+    id : 0,
     panNumber : '',
     firstName : '',
     score : 0
@@ -23,13 +24,25 @@ export class AddScoresComponent implements OnInit {
   }
 
   submit(): void {
-    this.scoreList.push(this.scoreToAdd);
+    this.service.add(this.scoreToAdd).subscribe(
+      data => this.scoreList.push(data)
+    );
+    // this.scoreList.push(this.scoreToAdd);
     console.log(this.scoreToAdd);
     this.scoreToAdd = {
+      id : 0,
       panNumber : '',
       firstName : '',
       score : 0
     };
   }
 
+  remove(entity: CibilScore): void {
+    const indexPosition = this.scoreList.indexOf(entity);
+    // this.scoreList.splice(indexPosition, 1);
+    this.service.remove(entity).subscribe(
+      data => this.scoreList.splice(indexPosition, 1)
+    )
+    console.log(entity);
+  }
 }

@@ -1,13 +1,23 @@
 <div class="row">
   <div class="col-md-6">
-    <form #frm='ngForm' (ngSubmit)='submit()'>
-      <label for="panNumber"> PAN Number </label>
-      <input type="text" name="panNumber" [(ngModel)]='scoreToAdd.panNumber'>
-      <label for="firstName"> First Name </label>
-      <input type="text" name="firstName" [(ngModel)]='scoreToAdd.firstName'>
-      <label for="score"> Score </label>
-      <input type="number" name="score" [(ngModel)]='scoreToAdd.score'>
-      <button type="submit" class="btn btn-primary"> Add <i class="fa fa-user-plus" aria-hidden="true"></i> </button>
+    <form #frm='ngForm' (ngSubmit)='submit()' class="form" ngNativeValidate>
+      <div class="form-group">
+        <label for="id"> ID </label>
+        <input type="number" name="id" class="form-control" required [(ngModel)]='scoreToAdd.id'>
+      </div>
+      <div class="form-group">
+        <label for="panNumber"> PAN Number </label>
+        <input type="text" name="panNumber" class="form-control" required [(ngModel)]='scoreToAdd.panNumber'>
+      </div>
+      <div class="form-group">
+        <label for="firstName"> First Name </label>
+        <input type="text" name="firstName" class="form-control" [(ngModel)]='scoreToAdd.firstName'>
+      </div>
+      <div class="form-group">
+        <label for="score"> Score </label>
+        <input type="number" name="score" class="form-control" required [(ngModel)]='scoreToAdd.score'>
+      </div>
+      <button type="submit" class="btn btn-dark"> Add <i class="fa fa-user-plus" aria-hidden="true"></i> </button>
     </form>
     <p> {{scoreToAdd|json}} </p>
   </div>
@@ -18,11 +28,13 @@
         <th id="panNumber">PAN Number</th>
         <th id="firstName">First Name</th>
         <th id="score">Scores</th>
+        <th id="remove">Remove</th>
       </tr>
       <tr *ngFor="let score of scoreList">
         <td>{{score.panNumber}}</td>
         <td>{{score.firstName|uppercase}}</td>
         <td>{{score.score|number:'3.2-2'}}</td>
+        <td><button (click)="remove(score)"> <i class="fa fa-trash" aria-hidden="true"></i> </button></td>
       </tr>
     </table>
   </div>

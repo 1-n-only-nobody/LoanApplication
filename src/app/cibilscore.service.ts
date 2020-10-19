@@ -16,7 +16,14 @@ export class CibilscoreService {
   url = 'http://localhost:3000/scores';
 
   findAll(): Observable<CibilScore[]> {
-
     return this.client.get<CibilScore[]>(this.url);
+  }
+
+  add(entity: CibilScore): Observable<CibilScore> {
+    return this.client.post<CibilScore>(this.url, entity);
+  }
+
+  remove(entity: CibilScore): Observable<CibilScore> {
+    return this.client.delete<CibilScore>(this.url + '/' + entity.id);
   }
 }
