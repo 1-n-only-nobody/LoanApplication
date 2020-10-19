@@ -3,7 +3,9 @@
 
 <!-- child-selector [childProperty]='parentProperty' [childProperty]='parentProperty' -->
 <app-search [searchLabel]="searchText" [searchString]='queryString' (responseEvent)="handleResponse($event)"></app-search>
+<!-- <input type="text" [(ngModel)]='queryStringExtra'> -->
 <input type="text" [(ngModel)]='queryString'>
+
 
 <h3>{{message}}</h3>
 
@@ -11,6 +13,7 @@
 <h6>Date : {{currentDate|date:'full'}} </h6>
 
 <table class="table table-striped">
+  <caption>CibilScore Table</caption>
   <tr>
     <th id="panNumber">PAN Number</th>
     <th id="firstName">First Name</th>
@@ -19,7 +22,7 @@
     <th id="extra2"></th>
     <th id="showHide"></th>
   </tr>
-  <tr *ngFor='let score of scoreList'>
+  <tr *ngFor="let score of scoreList">
     <!-- Interpolation -->
     <td>{{score.panNumber}}</td>
     <td>{{score.firstName|uppercase}}</td>

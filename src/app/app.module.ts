@@ -8,6 +8,9 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
 import { TwowayComponent } from './twoway/twoway.component';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
+import { MyfilterPipe } from './myfilter.pipe';
+import { RegisterUserComponent } from './register-user/register-user.component';
+import { AddScoresComponent } from './add-scores/add-scores.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { SearchComponent } from './search/search.component';
     ShowscoreComponent,
     FooterComponentComponent,
     TwowayComponent,
-    SearchComponent
+    SearchComponent,
+    MyfilterPipe,
+    RegisterUserComponent,
+    AddScoresComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule

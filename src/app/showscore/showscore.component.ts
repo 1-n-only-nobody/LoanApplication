@@ -22,6 +22,7 @@ export class ShowscoreComponent implements OnInit {
 
   searchText = 'Search by Key in List';
   queryString = '';
+  queryStringExtra = '';
   message = '';
 
 
